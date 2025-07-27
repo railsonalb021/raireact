@@ -1,15 +1,20 @@
 import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import Footer from './components/Footer';
+import ProjectPage from './pages/ProjectPage';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="app-container">
+    <Router>
       <Navbar />
-      <HomePage />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/projetos" element={<ProjectPage />} />
+      </Routes>
       <Footer />
-    </div>
-  )
-}
+    </Router>
+  );
+};
 
-export default App
+export default App;
