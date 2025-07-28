@@ -1,36 +1,36 @@
-import minhaImagem from '../assets/profile.png';
+import minhaImagem from '../assets/profile.png'
+import TranslatedText from '../components/TranslatedText'
 
-const HomePage = () => {
-    return (
-      <div>
+function HomePage(){
+  return (
+    <div>
       <div className="flex flex-col items-center justify-center">
-        <h1 className="text-blue-500 text-xl font-mono pt-20">mec.dev</h1>
-        <h2 className="text-white font-mono">frontend developer</h2>
+        <TranslatedText textKey="mec.dev" className="pt-20 font-mono text-xl text-blue-500" />
+        <TranslatedText textKey="frontenddevloper" className="font-mono text-white" />
       </div>
-      <div className="flex flex-col items-center justify-center mt-10">
-        <img src={minhaImagem} alt="Railson Albino" className="rounded-full w-48 h-32 mb-4" />
+      <div className="mt-10 flex flex-col items-center justify-center">
+        <img src={minhaImagem} alt="Railson Albino" className="mb-4 h-32 w-48 rounded-full" />
       </div>
 
       <div className='grid grid-cols-1 lg:grid-cols-3 lg:pt-20'>
-      <div className='flex flex-col items-start pl-10'>
-        <h1 className='text-blue-500 pl-24 pb-3 font-mono'>my skills</h1>
-        <p className='text-white font-mono'>my skills are developing projects <br></br> in vue, nuxt, typescript and tailwind</p>
+        <div className='flex flex-col items-start pl-10'>
+          <TranslatedText textKey="myskills" className='pb-3 pl-24 font-mono text-blue-500' />
+          <TranslatedText textKey="myskillstext" className='font-mono text-white' />
+        </div>
+
+        <div className='flex flex-col items-center pl-10'>
+          <TranslatedText textKey="aboutme" className='pb-3 pr-5 font-mono text-blue-500' />
+          <TranslatedText textKey='aboutmetext' className='font-mono text-white' />
+        </div>
+
+        <div className='flex flex-col items-center pl-10'>
+          <TranslatedText textKey='nextsteps' className='pb-3 pr-5 font-mono text-blue-500' />
+          <TranslatedText textKey="nextstepstext" className='font-mono text-white' />
+        </div>
       </div>
 
-      <div className='flex flex-col items-center pl-10'>
-        <h1 className='text-blue-500 pr-5 pb-3 font-mono'>about me</h1>
-        <p className='text-white font-mono'>I study computer science, but I work as a web <br></br> development intern, I'm 22 years old</p>
-      </div>
+    </div>
+  )
+}
 
-      <div className='flex flex-col items-center pl-10'>
-        <h1 className='text-blue-500 pr-5 pb-3 font-mono'>my next steps</h1>
-        <p className='text-white font-mono'>now, I'm learning to develop a project <br></br> in react with typescript.</p>
-      </div>
-      </div>
-
-      </div>   
-    );
-  };
-  
-  export default HomePage;
-  
+export default HomePage
