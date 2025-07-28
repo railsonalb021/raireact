@@ -1,14 +1,14 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    './index.html',
+    './src/**/*.{js,ts,jsx,tsx}',
   ],
 
   theme: {
     extend: {
       colors: {
-        customThemePurple: '#171023'
+        customThemePurple: '#171023',
       },
 
       fontFamily: {
@@ -29,5 +29,5 @@ export default {
       },
     },
     plugins: [],
-  }
+  },
 }
