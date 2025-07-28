@@ -1,45 +1,50 @@
-const ProjectPage = () => {
-    return (
-      <section className="flex flex-col justify-between text-white px-8 py-12 font-mono bg-black">
-      <div className="text-center mt-10">
-        <h2 className="text-blue-500 text-lg font-bold mb-1">my projects</h2>
-        <p className="text-sm text-gray-300">frontend developer</p>
+import { Link } from 'react-router-dom'
+import TranslatedText from '../components/TranslatedText'
+
+function ProjectPage(){
+  return (
+    <section className="flex flex-col justify-between bg-black px-8 py-12 font-mono text-white">
+      <div className="mt-10 text-center">
+        <TranslatedText textKey='myprojects' className="mb-1 text-lg font-bold text-blue-500" />
       </div>
 
-      <div className="flex flex-col items-center justify-center mt-40 space-y-10">
-        <div className="flex flex-col items-center md:flex-row md:space-x-12">    
-          <div className="mt-6 md:mt-0 text-center md:text-left">
-            <h3 className="text-lg font-bold text-blue-500 mb-2">my website</h3>
-            <p className="text-sm text-gray-300 leading-relaxed max-w-md">
-            I'm developing my website in Vue and Nuxt.
+      <div className="mt-28 flex flex-col items-center justify-center space-y-10">
+        <div className="flex flex-col items-center md:flex-row md:space-x-12">
+          <div className="mt-6 text-center md:mt-0 md:text-left">
+            <TranslatedText textKey='mysitefood' className="mb-2 text-lg font-bold text-blue-500" />
+            <p className="max-w-md text-sm leading-relaxed text-gray-300">
+              I'm developing my website in Vue and Nuxt.
             </p>
-            <p className="text-xs mt-3 text-gray-400 italic">
+            <p className="mt-3 text-xs italic text-gray-400">
               tech stack: vue, nuxt.js, typescript, tailwindcss.
             </p>
-            <div className='text-sm pt-3 hover:text-blue-500 w-52'>
-            <a href='https://github.com/railsonalb021/Meu-Site-Pessoal' target='_blank'>• repository on github</a>
+            <div className='w-52 pt-3 text-sm hover:text-blue-500'>
+              <Link to="https://github.com/railsonalb021/Site-Food" target='_blank'>
+                <p className="transition-all duration-300 ease-out">• repository on github</p>
+              </Link>
             </div>
           </div>
         </div>
 
         <div className="flex flex-col items-center md:flex-row md:space-x-12">
-          <div className="mt-6 md:mt-3 text-center md:text-left ml-10">
-            <h3 className="text-lg font-bold text-blue-500 mb-2">website in react</h3>
-            <p className="text-sm text-gray-300 leading-relaxed max-w-md">
-            I am currently developing this website in react.
+          <div className="ml-10 mt-6 text-center md:mt-3 md:text-left">
+            <h3 className="mb-2 text-lg font-bold text-blue-500">website in react</h3>
+            <p className="max-w-md text-sm leading-relaxed text-gray-300">
+              I am currently developing this website in react.
             </p>
-            <p className="text-xs mt-3 text-gray-400 italic">
+            <p className="mt-3 text-xs italic text-gray-400">
               tech stack: react, tailwindcss, typescript.
             </p>
-            <div className='text-sm pt-3 hover:text-blue-500 w-52'>
-            <a href='https://github.com/railsonalb021/raireact' target='_blank'>• repository on github</a>
+            <div className='w-52 pt-3 text-sm hover:text-blue-500'>
+              <Link to="https://github.com/railsonalb021/raireact" target='_blank'>
+                <p className="transition-all duration-300 ease-out">• repository on github</p>
+              </Link>
             </div>
           </div>
         </div>
       </div>
-    </section> 
-    );
-  };
-  
-  export default ProjectPage;
-  
+    </section>
+  )
+}
+
+export default ProjectPage
