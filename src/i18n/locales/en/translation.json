@@ -1,0 +1,15 @@
+{
+  "home": "home",
+  "about": "about",
+  "projects": "projects",
+  "contact": "contact",
+  "frontenddevloper": "frontend developer",
+  "myskills": "my skills",
+  "myskillstext": "my skills are developing projects in vue, nuxt, typescript and tailwind",
+  "aboutme": "about me",
+  "aboutmetext": "I study computer science, but I work as a web development intern, I'm 22 years old",
+  "nextsteps": "nextsteps",
+  "nextstepstext": "now, I'm learning to develop a project in react with typescript.",
+  "myprojects": "my projects",
+  "mysitefood" : "my sitefood"
+}
