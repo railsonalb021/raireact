@@ -1,0 +1,15 @@
+{
+  "home": "início",
+  "about": "sobre",
+  "projects": "projetos",
+  "contact": "contato",
+  "frontenddevloper": "desenvolvedor frontend",
+  "myskills": "minhas habilidades",
+  "myskillstext": "minhas habilidades são desenvolver projetos em vue, nuxt, typescript e tailwind",
+  "aboutme": "sobre mim",
+  "aboutmetext": "Eu estudo ciência da computação, mas trabalho como estagiário em desenvolvimento web, tenho 22 anos",
+  "nextsteps": "próximos passos",
+  "nextstepstext": "agora, estou aprendendo a desenvolver um projeto em react com typescript.",
+  "myprojects": "meus projetos",
+  "mysitefood": "meu site de comida"
+}
