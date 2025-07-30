@@ -1,37 +1,51 @@
 import { useTranslation } from 'react-i18next'
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom'
-import Footer from './components/Footer'
-import Navbar from './components/Navbar'
-import HomePage from './pages/HomePage'
-import ProjectPage from './pages/ProjectPage'
+import { Route, BrowserRouter as Router, Routes, useLocation } from 'react-router-dom'
 import imagembr from './assets/br.png'
 import imagemusa from './assets/us.png'
+import Footer from './components/Footer'
+import Navbar from './components/Navbar'
+import StackMarquee from './components/StackMarquee'
+import HomePage from './pages/HomePage'
+import ProjectPage from './pages/ProjectPage'
+
+function AppWrapper(){
+  return (
+    <Router>
+      <App />
+    </Router>
+  )
+}
 
 function App(){
   const { i18n } = useTranslation()
+  const location = useLocation()
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng)
   }
 
   return (
-    <Router>
+    <>
       <Navbar />
-      <div className="flex justify-end gap-2 px-4 py-2">
-        <button type='button' onClick={() => changeLanguage('pt')} className="text-2xl transition-all duration-300 ease-out hover:scale-125">
-          <img src={imagembr} alt="Portuguese" className="h-6 w-8 rounded-full" />
+      <div className="flex justify-end gap-2 px-4">
+        <button type="button" onClick={() => changeLanguage('pt')} className="pr-1 text-2xl transition-all duration-300 ease-out hover:scale-125">
+          <img src={imagembr} alt="Portuguese" className="rounded-full lg:h-6 lg:w-8" />
         </button>
-        <button type='button' onClick={() => changeLanguage('en')} className="text-2xl transition-all duration-300 ease-out hover:scale-125">
-        <img src={imagemusa} alt="estadosunidos" className="h-6 w-8 rounded-full" />
+        <button type="button" onClick={() => changeLanguage('en')} className="pr-12 text-2xl transition-all duration-300 ease-out hover:scale-125">
+          <img src={imagemusa} alt="English" className="rounded-full lg:h-6 lg:w-8" />
         </button>
       </div>
+
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/projetos" element={<ProjectPage />} />
       </Routes>
+
+      {location.pathname === '/' && <StackMarquee />}
+
       <Footer />
-    </Router>
+    </>
   )
 }
 
-export default App
+export default AppWrapper
