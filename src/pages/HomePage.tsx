@@ -1,12 +1,34 @@
+import { motion } from 'framer-motion'
+import { useTranslation } from 'react-i18next'
+import { Typewriter } from 'react-simple-typewriter'
 import minhaImagem from '../assets/profile.png'
 import TranslatedText from '../components/TranslatedText'
 
 function HomePage(){
+  const { t } = useTranslation()
   return (
     <div>
       <div className="flex flex-col items-center justify-center">
-        <TranslatedText textKey="mec.dev" className="pt-20 font-mono text-2xl text-blue-500 lg:text-xl" />
-        <TranslatedText textKey="frontenddevloper" className="font-mono text-xl text-white" />
+        {/* <TranslatedText textKey="mec.dev" className="pt-20 font-mono text-2xl text-blue-500 lg:text-xl" />
+        {/* <TranslatedText textKey="frontenddevloper" className="font-mono text-xl text-white" /> */}
+        <div className="p-10 text-2xl text-blue-500">
+          <motion.span
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="font-mono"
+          >
+            <Typewriter
+              words={[t('mec.dev'), t('frontenddevloper')]}
+              loop={0}
+              cursor
+              cursorStyle="_"
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1000}
+            />
+          </motion.span>
+        </div>
       </div>
       <div className="mt-10 flex flex-col items-center justify-center">
         <img src={minhaImagem} alt="Railson Albino" className="mb-4 h-32 w-48 rounded-full" />
