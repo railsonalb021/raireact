@@ -8,7 +8,7 @@ function ProjectPage(){
         <TranslatedText textKey='myprojects' className="mb-1 text-lg font-bold text-blue-500" />
       </div>
 
-      <div className="mt-28 flex flex-col items-center justify-center space-y-10">
+      <div className="mt-14 flex flex-col items-center justify-center space-y-10">
         <div className="flex flex-col items-center md:flex-row md:space-x-12">
           <div className="mt-6 text-center md:mt-0 md:text-left">
             <TranslatedText textKey='mysitefood' className="mb-2 text-lg font-bold text-blue-500" />
