@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Typewriter } from 'react-simple-typewriter'
-import minhaImagem from '../assets/profile.png'
+import minhaImagem from '../assets/itachi.gif'
 import TranslatedText from '../components/TranslatedText'
 
 function HomePage(){
@@ -31,7 +31,7 @@ function HomePage(){
         </div>
       </div>
       <div className="mt-10 flex flex-col items-center justify-center">
-        <img src={minhaImagem} alt="Railson Albino" className="mb-4 h-32 w-48 rounded-full" />
+        <img src={minhaImagem} alt="Railson Albino" className="mb-4 h-40 w-44 rounded-full" />
       </div>
 
       <div className='grid grid-cols-1 pt-20 lg:grid-cols-3 lg:pt-20'>
