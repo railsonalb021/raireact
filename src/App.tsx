@@ -5,6 +5,7 @@ import imagemusa from './assets/us.png'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import StackMarquee from './components/StackMarquee'
+import AboutPage from './pages/AboutPage'
 import HomePage from './pages/HomePage'
 import ProjectPage from './pages/ProjectPage'
 
@@ -39,6 +40,7 @@ function App(){
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/projetos" element={<ProjectPage />} />
+        <Route path="/about" element={<AboutPage />} />
       </Routes>
 
       {location.pathname === '/' && <StackMarquee />}
