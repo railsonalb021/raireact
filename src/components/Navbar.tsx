@@ -11,7 +11,8 @@ function Navbar(){
         <ul className="-mt-7 flex space-x-4 pr-9 font-mono text-xl lg:text-sm">
           <Link to="/">
             <TranslatedText textKey='home' className='cursor-pointer transition-all duration-300 ease-out hover:text-blue-500' /></Link>
-          <TranslatedText textKey='about' className='cursor-pointer transition-all duration-300 ease-out hover:text-blue-500' />
+          <Link to="/about">
+            <TranslatedText textKey='about' className='cursor-pointer transition-all duration-300 ease-out hover:text-blue-500' /> </Link>
           <Link to="/projetos">
             <TranslatedText textKey='projects' className='cursor-pointer transition-all duration-300 ease-out hover:text-blue-500' /></Link>
           <TranslatedText textKey='contact' className='cursor-pointer transition-all duration-300 ease-out hover:text-blue-500' />
